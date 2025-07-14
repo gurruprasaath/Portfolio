@@ -1,30 +1,66 @@
 
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, Download } from "lucide-react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/23ADR052 Gurruprasaath M K.pdf';
+    link.download = 'Gurruprasaath_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
-          <div className="space-y-6 animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+          <motion.div 
+            className="space-y-6"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.h1 
+              className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               Hi, I'm{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Gurruprasaath M K
               </span>
-            </h1>
+            </motion.h1>
             
-            <h2 className="text-xl md:text-2xl text-gray-600 font-medium">
+            <motion.h2 
+              className="text-xl md:text-2xl text-gray-600 font-medium"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
               B.Tech Student in AI & Data Science
-            </h2>
+            </motion.h2>
             
-            <p className="text-lg text-gray-700 leading-relaxed max-w-lg">
+            <motion.p 
+              className="text-lg text-gray-700 leading-relaxed max-w-lg"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
               Enthusiastic and dedicated B.Tech student passionate about solving real-world problems using full-stack and AI/ML knowledge.
-            </p>
+            </motion.p>
 
             {/* Contact Info */}
-            <div className="flex flex-wrap gap-4 text-gray-600">
+            <motion.div 
+              className="flex flex-wrap gap-4 text-gray-600"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
               <a href="mailto:gurru9440@gmail.com" className="flex items-center gap-2 hover:text-blue-600 transition-colors">
                 <Mail size={18} />
                 gurru9440@gmail.com
@@ -33,15 +69,20 @@ const Hero = () => {
                 <Phone size={18} />
                 +91 6382911708
               </a>
-            </div>
+            </motion.div>
 
             {/* Social Links */}
-            <div className="flex gap-4 pt-4">
+            <motion.div 
+              className="flex gap-4 pt-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+            >
               <a
                 href="https://github.com/gurruprasaath"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-gray-900 text-white rounded-full hover:bg-gray-700 transition-colors hover-scale"
+                className="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
               >
                 <Github size={20} />
               </a>
@@ -49,44 +90,57 @@ const Hero = () => {
                 href="https://www.linkedin.com/in/gurruprasaath"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors hover-scale"
+                className="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
               >
                 <Linkedin size={20} />
               </a>
-            </div>
+            </motion.div>
 
             {/* CTA Buttons */}
-            <div className="flex gap-4 pt-6">
-              <a
-                href="#projects"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-300 hover-scale"
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 pt-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+            >
+              <Button
+                onClick={handleDownloadResume}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 font-medium"
               >
-                View My Work
-              </a>
-              <a
-                href="#contact"
-                className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full font-medium hover:border-blue-600 hover:text-blue-600 transition-all duration-300"
-              >
-                Get In Touch
-              </a>
-            </div>
-          </div>
+                <Download className="w-5 h-5 mr-2" />
+                Download Resume
+              </Button>
+              
+              <Button variant="outline" className="px-8 py-3 font-medium">
+                <a href="#projects" className="block">
+                  View My Work
+                </a>
+              </Button>
+              
+              <Button variant="outline" className="px-8 py-3 font-medium">
+                <a href="#contact" className="block">
+                  Get In Touch
+                </a>
+              </Button>
+            </motion.div>
+          </motion.div>
 
           {/* Profile Image */}
-          <div className="flex justify-center lg:justify-end animate-fade-in">
+          <motion.div 
+            className="flex justify-center lg:justify-end"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             <div className="relative">
-              <div className="w-80 h-80 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1">
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
-                  alt="Gurruprasaath M K"
-                  className="w-full h-full rounded-full object-cover border-4 border-white shadow-2xl"
-                />
-              </div>
-              <div className="absolute -bottom-4 -right-4 bg-white rounded-full p-4 shadow-lg">
-                <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-blue-500 rounded-full animate-pulse"></div>
-              </div>
+              <img
+                src="../../public/profile.jpg"
+                alt="Gurruprasaath M K"
+                draggable={false}
+                className="w-80 h-80 rounded-2xl object-cover shadow-2xl border-4 border-white"
+              />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

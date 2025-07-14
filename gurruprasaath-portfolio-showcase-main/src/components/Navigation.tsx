@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -16,10 +15,9 @@ const Navigation = () => {
   ];
 
   const handleDownloadResume = () => {
-    // Create a dummy resume download - replace with actual resume file
     const link = document.createElement('a');
-    link.href = '../../public/23ADR052 Gurruprasaath M K.pdf'; // You'll need to add your actual resume file to the public folder
-    link.download = 'Gurruprasaath_MK_Resume.pdf';
+    link.href = '/23ADR052 Gurruprasaath M K.pdf';
+    link.download = 'Gurruprasaath_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -47,9 +45,8 @@ const Navigation = () => {
             
             <Button
               onClick={handleDownloadResume}
-              variant="outline"
+              className="ml-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
               size="sm"
-              className="ml-4"
             >
               <Download className="w-4 h-4 mr-2" />
               Resume
@@ -86,9 +83,8 @@ const Navigation = () => {
                 handleDownloadResume();
                 setIsOpen(false);
               }}
-              variant="outline"
+              className="mt-4 w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-md hover:shadow-lg transition-all duration-300"
               size="sm"
-              className="mt-4 w-full"
             >
               <Download className="w-4 h-4 mr-2" />
               Download Resume

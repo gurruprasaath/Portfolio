@@ -13,43 +13,44 @@ const Projects = () => {
       gradient: "from-blue-500 to-cyan-500"
     },
     {
-      title: "AI Movie Recommender 🎬",
-      description: "Machine learning powered movie recommendation system using collaborative filtering and content-based algorithms.",
-      techStack: ["Python", "Scikit-learn", "Pandas", "Streamlit"],
-      githubLink: "https://github.com/gurruprasaath/movie-recommender",
-      liveLink: "https://movie-recommender-ai.streamlit.app",
+      title: "AI Scrapper 🤖",
+      description: "An AI-powered web scraper that extracts and processes dynamic website content using Selenium and Streamlit.",
+      techStack: ["Python", "Selinium", "Pandas", "Streamlit"],
+      githubLink: "https://github.com/gurruprasaath/Web-scrapper",
+      liveLink: "",
+
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      title: "E-Commerce Platform 🛒",
-      description: "Full-stack e-commerce solution with user authentication, product catalog, shopping cart, and payment integration.",
-      techStack: ["React", "Node.js", "MongoDB", "Express"],
-      githubLink: "https://github.com/gurruprasaath/ecommerce-platform",
-      liveLink: "https://ecommerce-demo.netlify.app",
+      title: "Mern Chat App",
+      description: "Real-time chat application built with the MERN stack, enabling seamless messaging with user authentication and socket-based communication.",
+      techStack: ["React", "Node.js", "MongoDB", "Express","MERN","JWT"],
+      githubLink: "https://github.com/gurruprasaath/MERN-CHAT-APP",
+      liveLink: "",
       gradient: "from-green-500 to-emerald-500"
     },
     {
-      title: "Data Visualization Dashboard 📊",
-      description: "Interactive dashboard for visualizing complex datasets with charts, graphs, and real-time data updates.",
-      techStack: ["Python", "Plotly", "Dash", "Pandas"],
-      githubLink: "https://github.com/gurruprasaath/data-dashboard",
-      liveLink: "https://data-viz-dashboard.herokuapp.com",
+      title: "Product Store 🛒",
+      description: "A full-stack product management app that allows users to create, view, update, and delete products with a responsive UI and backend integration.",
+      techStack: ["Reactjs", "MongoDB", "Expressjs", "Nodejs"],
+      githubLink: "https://github.com/gurruprasaath/product-store",
+      liveLink: "https://product-store-ebon.vercel.app/",
       gradient: "from-orange-500 to-red-500"
     },
     {
-      title: "Sentiment Analysis Tool 💭",
-      description: "NLP-based sentiment analysis application that processes text data and provides emotional insights with accuracy metrics.",
-      techStack: ["Python", "TensorFlow", "NLTK", "Flask"],
-      githubLink: "https://github.com/gurruprasaath/sentiment-analyzer",
-      liveLink: "https://sentiment-tool.herokuapp.com",
+      title: "Web Scrapper",
+      description: "Automated web scraping application that extracts, processes, and stores structured data from websites for analysis and reporting.",
+      techStack: ["Python", "BeautifulSoup", "Requests", "Pandas", "Flask"],
+      githubLink: "https://github.com/gurruprasaath/Web-scrapper",
+      liveLink: "",
       gradient: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Task Management System ✅",
-      description: "Collaborative task management application with real-time updates, team collaboration, and progress tracking features.",
-      techStack: ["React", "Firebase", "Material-UI", "JavaScript"],
-      githubLink: "https://github.com/gurruprasaath/task-manager",
-      liveLink: "https://task-manager-pro.firebase.app",
+      title: "E-commerce platform for clothing brands",
+      description: "A seamless e-commerce platform tailored for clothing brands to showcase, sell, and grow their fashion business online.",
+      techStack: ["React", "vercel", "Mongodb","Expressjs","MERN", "JavaScript"],
+      githubLink: "https://github.com/gurruprasaath/trendify",
+      liveLink: "https://trendify-orcin-one.vercel.app/",
       gradient: "from-teal-500 to-cyan-500"
     }
   ];
@@ -105,14 +106,17 @@ const Projects = () => {
                     <Github size={16} />
                     View Code
                   </a>
-                  <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${project.gradient} text-white rounded-lg hover:shadow-lg transition-all text-sm font-medium`}
-                  >
-                    🚀 Live Demo
-                  </a>
+                  {project.liveLink ? (
+                      <a
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${project.gradient} text-white rounded-lg hover:shadow-lg transition-all text-sm font-medium`}
+                      >
+                        🚀 Live Demo
+                      </a>
+                    ) : null}
+                   
                 </div>
               </div>
             </div>

@@ -129,9 +129,21 @@ const Contact = () => {
                   href="https://leetcode.com/u/23ADR052/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-orange-500 text-white rounded-xl flex items-center justify-center hover:bg-orange-600 transition-colors hover-scale"
                 >
-                  📊
+                  <img 
+  id="leet"
+  src="data:image/png;base64,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" 
+  alt="LeetCode"
+  style={{
+    width: "50px",
+    height: "50px",
+    backgroundColor: "#000",
+    padding: "8px",
+    borderRadius: "10px",
+    objectFit: "contain"
+  }}
+/>
+
                 </a>
               </div>
             </div>
