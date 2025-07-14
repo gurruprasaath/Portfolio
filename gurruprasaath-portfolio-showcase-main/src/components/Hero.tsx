@@ -135,7 +135,7 @@ const Hero = () => {
             <div className="relative">
               <img
                 src="/profile.jpg"
-                alt="Gurruprasaath M K"
+                alt="Gurruprasaath"
                 draggable={false}
                 className="w-80 h-80 rounded-2xl object-cover shadow-2xl border-4 border-white"
               />
