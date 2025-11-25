@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 const Hero = () => {
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/23ADR052 Gurruprasaath M K.pdf.pdf';
+    link.href = './../../public/23ADR052 Gurruprasaath M K.pdf.pdf';
     link.download = 'Gurruprasaath_Resume.pdf';
     document.body.appendChild(link);
     link.click();
