@@ -1,0 +1,12 @@
+
+? Want to modify these settings? no
+? Do you want to change additional project settings? no
+🔗  Linked to gurruprasaaths-projects/portfolio-app (created .vercel)
+? Detected a repository. Connect it to this project? yes
+> Connecting GitHub repository: https://github.com/gurruprasaath/Portfolio    
+> Connected
+🔍  Inspect: https://vercel.com/gurruprasaaths-projects/portfolio-app/5PxiEQ5tSJHdSx2uJy3cqRoHro51 [4s]
+⏳  Production: https://portfolio-py415p39f-gurruprasaaths-projects.vercel.app
+ [4s]
+Error: Command "npm install" exited with 1
+PS D:\New folder (2)\portfolio-app> 
