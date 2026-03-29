@@ -4,17 +4,21 @@ import MainLayout from '../layouts/main.astro';
 
 <MainLayout>
   <div class="min-h-screen bg-background text-foreground">
-    <!-- Hero Section (Editorial) -->
-    <section class="relative container mx-auto px-6 py-32 md:py-48 min-h-[90vh] flex items-center bg-background">
+    <!-- Hero Parallax Container -->
+    <div class="relative h-[100vh] w-full bg-background z-0">
+      <div class="sticky top-0 h-full w-full flex flex-col justify-center overflow-hidden">
+        <div id="hero-parallax-content" class="w-full transform origin-center transition-transform duration-75 ease-out will-change-transform">
+          <!-- Hero Section (Editorial) -->
+          <section class="relative container mx-auto px-6 py-20 min-h-[90vh] flex items-center">
       <div class="max-w-6xl mx-auto relative z-10 w-full">
         <div class="flex flex-col md:flex-row gap-8 lg:gap-12 justify-between items-start md:items-end">
           <div class="md:w-[60%] lg:w-[65%] min-w-0">
-            <span class="text-primary font-mono tracking-widest text-sm uppercase mb-6 block animate-elem">00. Intro</span>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] xl:text-[6rem] font-black mb-8 font-heading animate-elem leading-[0.95] tracking-tighter" style="transition-delay: 100ms;">
-              <span class="whitespace-nowrap">Gurruprasaath</span><br/><span class="text-primary/90">M K</span>
+            <span class="text-primary font-mono tracking-widest text-sm uppercase mb-6 block hero-sweep">00. Intro</span>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] xl:text-[6rem] font-black mb-8 font-heading hero-sweep leading-[0.95] tracking-tighter" style="transition-delay: 100ms;">
+              <span class="whitespace-nowrap">DHIYANESH</span><br/><span class="text-primary/90">B</span>
             </h1>
             
-            <div class="flex flex-col sm:flex-row gap-6 mb-12 animate-elem" style="transition-delay: 200ms;">
+            <div class="flex flex-col sm:flex-row gap-6 mb-12 hero-sweep" style="animation-delay: 200ms;">
               <!-- Creative Custom Status Indicator -->
               <div class="inline-flex items-center gap-3 pr-5 p-1 bg-card/50 backdrop-blur-md border border-border/60 rounded-full shadow-sm">
                 <div class="relative flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 text-white shadow-inner">
@@ -31,17 +35,17 @@ import MainLayout from '../layouts/main.astro';
               <div class="flex items-center gap-3">
                 <div class="h-[2px] w-8 bg-primary rounded-full"></div>
                 <span class="text-sm font-bold tracking-[0.2em] uppercase text-foreground/90">
-                  FullStack Developer
+                  AI & Data Science Undergraduate
                 </span>
               </div>
             </div>
           </div>
           
-          <div class="md:w-[40%] lg:w-[35%] animate-elem" style="transition-delay: 300ms;">
+          <div class="md:w-[40%] lg:w-[35%] hero-sweep" style="animation-delay: 300ms;">
             <p class="text-lg md:text-xl text-foreground/80 mb-10 leading-relaxed font-medium">
-              I build efficient, user-friendly web applications by bridging modern front-end design with robust back-end architecture. 
+              AI & Data Science undergraduate with a strong foundation in engineering fundamentals, problem-solving, and system-level thinking.
               <br><br>
-              Obsessed with problem-solving and writing exceptionally clean code.
+              Proficient in C programming, data structures, backend development, and analytical reasoning.
             </p>
             
             <div class="flex gap-4 flex-col sm:flex-row hero-buttons p-1">
@@ -62,26 +66,34 @@ import MainLayout from '../layouts/main.astro';
       <!-- Subtle background decoration -->
       <div class="absolute top-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
       <div class="absolute bottom-20 left-10 w-[30rem] h-[30rem] bg-secondary/5 rounded-full blur-[120px] pointer-events-none"></div>
-    </section>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rest of Document Stacks over Hero -->
+    <div class="relative z-10 bg-background w-full shadow-[0px_-20px_50px_rgba(0,0,0,0.05)] dark:shadow-[0px_-20px_50px_rgba(0,0,0,0.3)]">
 
     <!-- About Section -->
     <section class="py-24 scroll-section relative overflow-hidden bg-muted/30" id="about">
       <!-- Decorative background blur -->
-      <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
       
       <div class="container mx-auto px-6 relative z-10">
         <div class="max-w-6xl mx-auto">
           <div class="grid md:grid-cols-12 gap-16 items-center">
             
-            <!-- Creative Visual Side -->
-            <div class="md:col-span-5 relative animate-elem">
-              <!-- Animated floating frames -->
-              <div class="relative w-full aspect-[4/5] max-w-sm mx-auto">
-                <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl transform rotate-3 scale-105 transition-all duration-700 hover:rotate-6"></div>
-                <div class="absolute inset-0 border-2 border-primary/10 rounded-3xl transform -rotate-3 scale-105 transition-all duration-700 hover:-rotate-6 backdrop-blur-sm"></div>
+            <!-- Creative Visual Quote Cards -->
+            <div class="md:col-span-5 relative observe-sweep">
+              <div class="relative w-full aspect-[4/5] max-w-sm mx-auto" id="about-deck">
+                <!-- Abstract Background Frames (From Original Aesthetic) -->
+                <!-- Frame 1 (Rotates Right) -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl transform transition-transform duration-150 ease-out will-change-transform deck-card opacity-90" data-base-rotate="6" data-base-scale="1.05" data-spread-multi="2.5"></div>
+                <!-- Frame 2 (Rotates Left) -->
+                <div class="absolute inset-0 border-2 border-primary/10 rounded-3xl transform transition-transform duration-150 ease-out backdrop-blur-sm will-change-transform deck-card opacity-90" data-base-rotate="-6" data-base-scale="1.05" data-spread-multi="-2.5"></div>
                 
                 <!-- Main Glass Card -->
-                <div class="absolute inset-0 bg-background/80 backdrop-blur-xl border border-border/60 rounded-3xl p-8 shadow-2xl flex flex-col justify-between group overflow-hidden">
+                <div class="absolute inset-0 bg-background/80 backdrop-blur-xl border border-border/60 rounded-3xl p-8 shadow-2xl flex flex-col justify-between group overflow-hidden deck-card z-10" data-base-rotate="0" data-base-scale="1.0" data-spread-multi="0">
                   <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                   
                   <div class="relative z-10">
@@ -103,35 +115,35 @@ import MainLayout from '../layouts/main.astro';
             </div>
 
             <!-- Text Content Side -->
-            <div class="md:col-span-7 animate-elem" style="transition-delay: 200ms;">
+            <div class="md:col-span-7 observe-sweep" style="transition-delay: 200ms;">
               <span class="text-primary font-mono tracking-widest text-sm uppercase mb-4 block">01. About</span>
               <h2 class="text-5xl md:text-6xl font-black tracking-tighter font-heading mb-8">
-                A bit about me.
+                Professional Profile.
               </h2>
               
               <div class="space-y-6">
                 <p class="text-lg text-foreground/90 leading-relaxed">
-                  I'm a FullStack Developer based in Erode, Tamilnadu, working at the intersection of modern front-end and back-end technologies. I'm currently pursuing my B.Tech in Artificial Intelligence and Data Science at Kongu Engineering College.
+                  I'm an AI & Data Science undergraduate based in Olagadam, Bhavani, Erode. I have a strong interest in measurement, automation, and engineering-oriented software systems.
                 </p>
                 <p class="text-lg text-foreground/90 leading-relaxed">
-                  I hold a strong interest in AI-integrated applications and database management. I focus on building accessible web applications and exploring how AI can enhance the user experience.
+                  Experienced in building full-stack and data-driven applications, I demonstrate strong logical thinking and adaptability to real-world engineering challenges. I'm currently pursuing my B.Tech at Kongu Engineering College.
                 </p>
               </div>
               
               <div class="pt-8 mt-8 border-t border-border/50">
                 <p class="text-sm font-semibold text-foreground mb-4">Core Technologies & Tools</p>
                 <div class="flex flex-wrap gap-2.5">
+                  <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">C</span>
+                  <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">C++</span>
                   <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">Python</span>
                   <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">Java</span>
-                  <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">C</span>
-                  <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">JavaScript</span>
-                  <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">React</span>
-                  <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">FastAPI</span>
-                  <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">Node.js</span>
-                  <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">MySQL</span>
-                  <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">MongoDB</span>
-                  <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">Docker</span>
+                  <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">DSA</span>
+                  <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">Problem Solving</span>
+                  <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">DBMS</span>
+                  <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">OS</span>
                   <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">Git/GitHub</span>
+                  <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">Linux</span>
+                  <span class="text-xs px-3 py-1.5 bg-background rounded-md border border-border shadow-sm hover:border-primary/50 transition-colors">VS Code</span>
                 </div>
               </div>
             </div>
@@ -147,84 +159,66 @@ import MainLayout from '../layouts/main.astro';
         <!-- Magazine Style Header -->
         <div class="max-w-5xl mx-auto mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b-2 border-border pb-8">
           <div>
-            <span class="text-primary font-mono tracking-widest text-sm uppercase mb-4 block animate-elem">02. Career</span>
-            <h2 class="text-5xl md:text-7xl font-black tracking-tighter animate-elem font-heading" style="transition-delay: 100ms;">
-              Where I've Built.
+            <span class="text-primary font-mono tracking-widest text-sm uppercase mb-4 block observe-sweep">02. Career</span>
+            <h2 class="text-5xl md:text-7xl font-black tracking-tighter observe-sweep font-heading" style="transition-delay: 100ms;">
+              Professional<br />Journey.
             </h2>
           </div>
-          <div class="max-w-xs animate-elem" style="transition-delay: 200ms;">
-            <p class="text-muted-foreground text-sm font-medium leading-relaxed">I don't just write code. I build interactive AI platforms that solve real-world complexities.</p>
+          <div class="max-w-xs observe-sweep" style="transition-delay: 200ms;">
+            <p class="text-muted-foreground text-sm font-medium leading-relaxed">Bringing creative solutions to life through clean architecture and innovative design.</p>
           </div>
         </div>
         
-        <!-- Totally Unique Organic Layout -->
-        <div class="max-w-5xl mx-auto">
-          <div class="relative bg-card rounded-[2rem] md:rounded-[3rem] border border-border/80 shadow-2xl p-8 md:p-12 lg:p-16 overflow-hidden group hover:border-primary/50 transition-colors duration-700 animate-elem">
-            
-            <!-- Organic Background Element -->
+        <!-- Organic Layout for Experience -->
+        <div class="max-w-5xl mx-auto space-y-24">
+          <div class="relative bg-card rounded-[2rem] md:rounded-[3rem] border border-border/80 shadow-2xl p-8 md:p-12 lg:p-16 overflow-hidden group hover:border-primary/50 transition-colors duration-700 observe-3d-flip">
             <div class="absolute top-0 right-0 w-[40rem] h-[40rem] bg-gradient-to-bl from-primary/10 via-secondary/5 to-transparent rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 opacity-60 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
             
             <div class="grid md:grid-cols-12 gap-12 relative z-10 items-center">
-              
-              <!-- Visually striking left panel -->
               <div class="md:col-span-5 flex flex-col justify-between h-full">
-                <div>
-                  <div class="inline-block px-4 py-2 bg-foreground text-background font-mono text-xs uppercase tracking-widest rounded-full mb-8 transform -rotate-3 hover:rotate-0 transition-transform cursor-default shadow-md">
-                    Current Role
+                <div class="space-y-6">
+                  <div class="inline-block px-4 py-2 bg-foreground text-background font-mono text-xs uppercase tracking-widest rounded-full transform -rotate-3 hover:rotate-0 transition-transform shadow-md">
+                    Full-Stack Project
                   </div>
-                  <h3 class="text-5xl md:text-6xl font-black mb-4 tracking-tight font-heading text-foreground">PunchBiz</h3>
-                  <div class="flex items-center gap-3 text-primary font-bold text-xl mb-12">
-                    <svg class="w-6 h-6 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    Fullstack AI Intern
-                  </div>
-                </div>
-                
-                <div class="font-mono text-sm text-muted-foreground border-l-2 border-primary/50 pl-5 relative before:absolute before:-left-[5px] before:top-0 before:w-2 before:h-2 before:bg-primary before:rounded-full after:absolute after:-left-[5px] after:bottom-0 after:w-2 after:h-2 after:bg-primary after:rounded-full">
-                  <p class="mb-1 uppercase tracking-wider text-xs">Commenced</p>
-                  <p class="font-bold text-foreground text-lg">JUN 2025</p>
-                  <p class="mt-6 mb-1 uppercase tracking-wider text-xs">Status</p>
-                  <p class="flex items-center gap-2 font-bold text-emerald-500 text-lg">
-                    <span class="relative flex h-3 w-3">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-                    </span>
-                    PRESENT
-                  </p>
-                </div>
-              </div>
-              
-              <!-- Content rich right panel -->
-              <div class="md:col-span-7 md:pl-8">
-                <div class="prose prose-lg dark:prose-invert max-w-none">
-                  <p class="text-xl leading-relaxed text-foreground/90 font-medium mb-10">
-                    Spearheading the development of <strong class="text-foreground">MockMentorBiz</strong>, 
-                    a next-generation interview simulation platform powered exclusively by advanced AI models.
-                  </p>
+                  <h3 class="text-5xl md:text-6xl font-black tracking-tight font-heading text-foreground">Vijimart</h3>
+                  <p class="text-xl font-bold font-heading text-primary">E-Commerce Platform</p>
                   
-                  <ul class="space-y-8 list-none pl-0">
-                    <li class="relative pl-10 text-lg text-muted-foreground leading-relaxed">
-                      <span class="absolute left-0 top-2 w-3 h-3 rounded bg-primary/20 ring-4 ring-primary/10 flex items-center justify-center"><span class="w-1 h-1 bg-primary rounded-full"></span></span>
-                      Engineering resilient full-stack architecture that seamlessly integrates <strong class="text-foreground">Groq LLM (GPT-OSS-120B)</strong> to provide ultra-fast real-time tailored question generation and deep resume analysis.
-                    </li>
-                    <li class="relative pl-10 text-lg text-muted-foreground leading-relaxed">
-                      <span class="absolute left-0 top-2 w-3 h-3 rounded bg-secondary/20 ring-4 ring-secondary/10 flex items-center justify-center"><span class="w-1 h-1 bg-secondary rounded-full"></span></span>
-                      Collaborating closely within an agile 4-member squad to architect automated parsing algorithms and an immersive, realistic UI/UX simulation interface.
-                    </li>
-                  </ul>
-                </div>
-                
-                <!-- Micro-interaction brutalist button -->
-                <div class="mt-12 pt-8 border-t border-border/50">
-                  <a href="https://mockmentorbiz.punchbiz.co/" target="_blank" class="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-background transition-all duration-300 bg-foreground font-mono rounded-2xl hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:hover:shadow-[0_10px_40px_-10px_rgba(255,255,255,0.2)] hover:-translate-y-1 overflow-hidden">
-                    <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[ripple-anim_1.5s_ease-in-out_infinite]"></span>
-                    <span class="relative flex items-center gap-3 text-sm tracking-wide">
-                      VIEW LIVE PLATFORM
-                      <svg class="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h7"></path></svg>
-                    </span>
-                  </a>
+                  <div class="pt-8 space-y-4">
+                    <p class="text-muted-foreground leading-relaxed text-lg">
+                      Built a comprehensive full-stack platform with integrated product management, cart systems, and order processing.
+                    </p>
+                    <p class="text-muted-foreground leading-relaxed text-lg font-medium italic">
+                      "Designed a personalized budget-based automated grocery planning system."
+                    </p>
+                  </div>
+                  
+                  <div class="flex flex-wrap gap-3 pt-4">
+                    <span class="px-3 py-1 bg-muted rounded-full text-xs font-mono">MongoDB</span>
+                    <span class="px-3 py-1 bg-muted rounded-full text-xs font-mono">Express</span>
+                    <span class="px-3 py-1 bg-muted rounded-full text-xs font-mono">React</span>
+                    <span class="px-3 py-1 bg-muted rounded-full text-xs font-mono">Node.js</span>
+                  </div>
                 </div>
               </div>
               
+              <div class="md:col-span-7">
+                <div class="relative group/iframe">
+                  <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-[2rem] blur opacity-25 group-hover/iframe:opacity-50 transition duration-1000"></div>
+                  <div class="relative bg-background rounded-[1.8rem] border border-border overflow-hidden h-[350px] md:h-[450px] shadow-2xl flex flex-col">
+                    <div class="bg-muted px-4 py-3 border-b border-border flex items-center justify-between shrink-0">
+                      <div class="flex gap-2">
+                        <div class="w-3 h-3 rounded-full bg-red-400/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-400/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-400/80"></div>
+                      </div>
+                      <div class="mx-auto bg-background/50 text-xs text-muted-foreground px-3 py-1 rounded-md font-mono truncate max-w-[200px]">
+                        vijimart.vercel.app
+                      </div>
+                    </div>
+                    <iframe src="https://vijimart.vercel.app" class="w-full flex-1 border-0 bg-background" loading="lazy" title="Vijimart Demo" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -235,7 +229,7 @@ import MainLayout from '../layouts/main.astro';
     <section class="py-24 scroll-section bg-muted/30" id="work">
       <div class="container mx-auto px-6">
         <div class="max-w-6xl mx-auto">
-          <div class="mb-16 animate-elem">
+          <div class="mb-16 observe-sweep">
             <p class="text-sm uppercase tracking-wider text-muted-foreground mb-3">Selected work</p>
             <h2 class="text-4xl md:text-5xl font-bold font-heading">
               Things I've built
@@ -244,26 +238,23 @@ import MainLayout from '../layouts/main.astro';
           
           <div class="space-y-24">
             <!-- Project 1 -->
-            <div class="grid md:grid-cols-12 gap-8 items-center animate-elem">
+            <div class="grid md:grid-cols-12 gap-8 items-center observe-elastic">
               <div class="md:col-span-7 order-2 md:order-1">
                 <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 rounded-2xl p-8 aspect-video flex items-center justify-center border border-border">
-                  <div class="w-full max-w-sm">
-                    <div class="bg-white dark:bg-card rounded-lg shadow-xl p-4">
-                      <div class="flex gap-2 mb-3">
-                        <div class="w-2 h-2 rounded-full bg-red-400"></div>
-                        <div class="w-2 h-2 rounded-full bg-yellow-400"></div>
-                        <div class="w-2 h-2 rounded-full bg-green-400"></div>
+                  <div class="w-full max-w-xl aspect-[16/10] bg-background rounded-xl shadow-2xl overflow-hidden border border-border flex flex-col hover:scale-[1.02] transition-transform duration-500">
+                    <!-- Browser Chrome Bar -->
+                    <div class="bg-muted/50 border-b border-border px-4 py-2 flex items-center gap-2">
+                      <div class="flex gap-1.5">
+                        <div class="w-3 h-3 rounded-full bg-red-400/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-400/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-400/80"></div>
                       </div>
-                      <div class="space-y-3">
-                        <div class="h-2 bg-muted rounded w-3/4"></div>
-                        <div class="h-2 bg-muted rounded w-full"></div>
-                        <div class="h-20 bg-gradient-to-br from-primary/20 to-secondary/20 rounded"></div>
-                        <div class="grid grid-cols-2 gap-2">
-                          <div class="h-12 bg-muted rounded"></div>
-                          <div class="h-12 bg-muted rounded"></div>
-                        </div>
+                      <div class="mx-auto bg-background/50 text-[10px] sm:text-xs text-muted-foreground px-3 py-1 rounded-md font-mono truncate max-w-[150px] sm:max-w-xs">
+                        blogify--web.vercel.app
                       </div>
                     </div>
+                    <!-- The Interactive Iframe -->
+                    <iframe src="https://blogify--web.vercel.app" class="w-full flex-1 border-0 bg-background" loading="lazy" title="Blogify Demo" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
                   </div>
                 </div>
               </div>
@@ -271,19 +262,18 @@ import MainLayout from '../layouts/main.astro';
               <div class="md:col-span-5 order-1 md:order-2">
                 <div class="space-y-4">
                   <div>
-                    <h3 class="text-2xl md:text-3xl font-bold font-heading mb-3">VoiceControlled IDE</h3>
+                    <h3 class="text-2xl md:text-3xl font-bold font-heading mb-3">Blogify – Full-Stack Blogging Platform</h3>
                     <p class="text-muted-foreground leading-relaxed">
-                      Voice-controlled IDE that enables hands-free coding with speech-to-text, AI-powered code generation, auto-scroll, and real-time feedback for people with motor disabilities.
+                      Built a full-stack blogging platform with secure authentication and CRUD operations for posts and user profiles. Designed responsive UI components and integrated backend services with database storage.
                     </p>
                   </div>
                   <div class="flex flex-wrap gap-2">
-                    <span class="text-xs px-3 py-1 bg-muted rounded-full">React</span>
-                    <span class="text-xs px-3 py-1 bg-muted rounded-full">FastAPI</span>
-                    <span class="text-xs px-3 py-1 bg-muted rounded-full">Python</span>
-                    <span class="text-xs px-3 py-1 bg-muted rounded-full">Whisper</span>
                     <span class="text-xs px-3 py-1 bg-muted rounded-full">MongoDB</span>
+                    <span class="text-xs px-3 py-1 bg-muted rounded-full">Express.js</span>
+                    <span class="text-xs px-3 py-1 bg-muted rounded-full">React.js</span>
+                    <span class="text-xs px-3 py-1 bg-muted rounded-full">Node.js</span>
                   </div>
-                  <a href="https://github.com/Alwin1605-lab/Codevoice_" target="_blank" class="inline-flex items-center gap-2 text-sm text-primary hover:gap-3 transition-all">
+                  <a href="https://github.com/Dhiyanesh40/Blogify–Web" target="_blank" class="inline-flex items-center gap-2 text-sm text-primary hover:gap-3 transition-all">
                     View on GitHub
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -294,22 +284,22 @@ import MainLayout from '../layouts/main.astro';
             </div>
 
             <!-- Project 2 -->
-            <div class="grid md:grid-cols-12 gap-8 items-center animate-elem">
+            <div class="grid md:grid-cols-12 gap-8 items-center observe-elastic">
               <div class="md:col-span-5">
                 <div class="space-y-4">
                   <div>
-                    <h3 class="text-2xl md:text-3xl font-bold font-heading mb-3">AI Study Buddy</h3>
+                    <h3 class="text-2xl md:text-3xl font-bold font-heading mb-3">Planora – Smart Travel Itinerary Planner</h3>
                     <p class="text-muted-foreground leading-relaxed">
-                      Generates MCQs, extracts units, and creates structured study content using LLaMA models with a FastAPI backend.
+                      Developed a full-stack travel planning application enabling users to create, manage, and share personalized itineraries based on destination, travel dates, budget, and preferences. Implemented RESTful APIs, RBAC, and expense estimation.
                     </p>
                   </div>
                   <div class="flex flex-wrap gap-2">
-                    <span class="text-xs px-3 py-1 bg-muted rounded-full">React</span>
-                    <span class="text-xs px-3 py-1 bg-muted rounded-full">FastAPI</span>
-                    <span class="text-xs px-3 py-1 bg-muted rounded-full">Groq LLaMA</span>
-                    <span class="text-xs px-3 py-1 bg-muted rounded-full">MongoDB</span>
+                    <span class="text-xs px-3 py-1 bg-muted rounded-full">React.js</span>
+                    <span class="text-xs px-3 py-1 bg-muted rounded-full">Node.js</span>
+                    <span class="text-xs px-3 py-1 bg-muted rounded-full">TypeScript</span>
+                    <span class="text-xs px-3 py-1 bg-muted rounded-full">MySQL</span>
                   </div>
-                  <a href="https://github.com/gurruprasaath/Ai-Study-buddy" target="_blank" class="inline-flex items-center gap-2 text-sm text-primary hover:gap-3 transition-all">
+                  <a href="https://github.com/Dhiyanesh40/Planora–Web" target="_blank" class="inline-flex items-center gap-2 text-sm text-primary hover:gap-3 transition-all">
                     View on GitHub
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -320,96 +310,42 @@ import MainLayout from '../layouts/main.astro';
               
               <div class="md:col-span-7">
                 <div class="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 rounded-2xl p-8 aspect-video flex items-center justify-center border border-border">
-                  <div class="w-40">
-                    <div class="bg-white dark:bg-card rounded-3xl shadow-2xl p-3 border-8 border-gray-800 dark:border-gray-200">
-                      <div class="space-y-3">
-                        <div class="h-1 bg-muted rounded w-20 mx-auto"></div>
-                        <div class="h-16 bg-gradient-to-br from-emerald-400 to-teal-400 rounded-xl"></div>
-                        <div class="space-y-2">
-                          <div class="h-1.5 bg-muted rounded w-full"></div>
-                          <div class="h-1.5 bg-muted rounded w-3/4"></div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2 pt-2">
-                          <div class="h-8 bg-muted rounded"></div>
-                          <div class="h-8 bg-muted rounded"></div>
-                          <div class="h-8 bg-muted rounded"></div>
-                        </div>
+                  <div class="w-full max-w-xl aspect-[16/10] bg-background rounded-xl shadow-2xl overflow-hidden border border-border flex flex-col hover:scale-[1.02] transition-transform duration-500">
+                    <!-- Browser Chrome Bar -->
+                    <div class="bg-muted/50 border-b border-border px-4 py-2 flex items-center gap-2">
+                      <div class="flex gap-1.5">
+                        <div class="w-3 h-3 rounded-full bg-red-400/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-400/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-400/80"></div>
+                      </div>
+                      <div class="mx-auto bg-background/50 text-[10px] sm:text-xs text-muted-foreground px-3 py-1 rounded-md font-mono truncate max-w-[150px] sm:max-w-xs">
+                        planora--web.vercel.app
                       </div>
                     </div>
+                    <!-- The Interactive Iframe -->
+                    <iframe src="https://planora--web.vercel.app" class="w-full flex-1 border-0 bg-background" loading="lazy" title="Planora Demo" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="grid md:grid-cols-12 gap-8 items-center animate-elem">
-              <div class="md:col-span-7 order-2 md:order-1">
-                <div class="bg-gradient-to-br from-violet-50 to-purple-50 dark:from-violet-950/20 dark:to-purple-950/20 rounded-2xl p-8 aspect-video flex items-center justify-center border border-border">
-                  <div class="w-full max-w-md space-y-3">
-                    <div class="bg-white dark:bg-card rounded-lg shadow-lg p-4">
-                      <div class="flex items-center justify-between mb-4">
-                        <div class="h-2 bg-muted rounded w-24"></div>
-                        <div class="flex gap-1">
-                          <div class="w-6 h-6 rounded bg-muted"></div>
-                          <div class="w-6 h-6 rounded bg-muted"></div>
-                        </div>
-                      </div>
-                      <div class="grid grid-cols-3 gap-3">
-                        <div class="h-16 bg-gradient-to-br from-violet-200 to-purple-200 dark:from-violet-800 dark:to-purple-800 rounded flex items-center justify-center">
-                          <div class="text-2xl">📊</div>
-                        </div>
-                        <div class="h-16 bg-muted rounded"></div>
-                        <div class="h-16 bg-muted rounded"></div>
-                        <div class="h-16 bg-muted rounded"></div>
-                        <div class="h-16 bg-muted rounded"></div>
-                        <div class="h-16 bg-muted rounded"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="md:col-span-5 order-1 md:order-2">
-                <div class="space-y-4">
-                  <div>
-                    <h3 class="text-2xl md:text-3xl font-bold font-heading mb-3">AI Call Intelligence</h3>
-                    <p class="text-muted-foreground leading-relaxed">
-                      Call analysis system with transcription, sentiment scoring, and automated conversation summaries using LLMs and ASR.
-                    </p>
-                  </div>
-                  <div class="flex flex-wrap gap-2">
-                    <span class="text-xs px-3 py-1 bg-muted rounded-full">React</span>
-                    <span class="text-xs px-3 py-1 bg-muted rounded-full">Node</span>
-                    <span class="text-xs px-3 py-1 bg-muted rounded-full">Python</span>
-                    <span class="text-xs px-3 py-1 bg-muted rounded-full">Whisper</span>
-                    <span class="text-xs px-3 py-1 bg-muted rounded-full">MongoDB</span>
-                  </div>
-                  <a href="https://github.com/gurruprasaath/Ai-call-intelligence" target="_blank" class="inline-flex items-center gap-2 text-sm text-primary hover:gap-3 transition-all">
-                    View on GitHub
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
-                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>    <!-- Combined Academics & Milestones -->
+    </section>
+    <!-- Combined Academics & Milestones -->
     <section class="py-32 scroll-section bg-background relative" id="education">
       <div class="container mx-auto px-6">
         
         <div class="max-w-5xl mx-auto mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b-2 border-border pb-8">
           <div>
-            <span class="text-primary font-mono tracking-widest text-sm uppercase mb-4 block animate-elem">04. Foundation</span>
-            <h2 class="text-5xl md:text-7xl font-black tracking-tighter animate-elem font-heading" style="transition-delay: 100ms;">
+            <span class="text-primary font-mono tracking-widest text-sm uppercase mb-4 block observe-sweep">04. Foundation</span>
+            <h2 class="text-5xl md:text-7xl font-black tracking-tighter observe-sweep font-heading" style="transition-delay: 100ms;">
               The Background.
             </h2>
           </div>
         </div>
 
-        <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-16 animate-elem">
+        <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-16 observe-matrix">
           <!-- Educations -->
           <div>
             <h3 class="font-mono text-xl uppercase tracking-widest mb-10 text-foreground/50 border-b border-border/50 pb-4">Academics</h3>
@@ -419,21 +355,21 @@ import MainLayout from '../layouts/main.astro';
                 <p class="font-mono text-sm text-primary font-bold mb-2">2023 — 2027</p>
                 <h4 class="text-2xl font-bold font-heading mb-2">Kongu Engineering College</h4>
                 <p class="text-foreground font-medium">B.Tech Artificial Intelligence & Data Science</p>
-                <p class="text-muted-foreground text-sm mt-3 font-mono">CGPA: 8.09 (till 5th Sem)</p>
+                <p class="text-muted-foreground text-sm mt-3 font-mono">CGPA: 7.94 (till 5th Sem)</p>
               </div>
               <div class="group relative pl-8 border-l-[3px] border-border hover:border-primary transition-colors">
                 <div class="absolute -left-[10.5px] top-0 w-5 h-5 rounded-full bg-background border-[3px] border-border group-hover:border-primary transition-colors"></div>
-                <p class="font-mono text-sm text-muted-foreground group-hover:text-primary transition-colors mb-2 font-bold">2022 — 2023</p>
-                <h4 class="text-2xl font-bold font-heading mb-2 text-foreground/80 group-hover:text-foreground transition-colors">Geethaanjali All India SR SEC School</h4>
-                <p class="text-muted-foreground font-medium">Higher Secondary (HSC)</p>
-                <p class="text-muted-foreground text-sm mt-3 font-mono">Score: 90.4%</p>
+                <p class="font-mono text-sm text-muted-foreground group-hover:text-primary transition-colors mb-2 font-bold">2023</p>
+                <h4 class="text-2xl font-bold font-heading mb-2 text-foreground/80 group-hover:text-foreground transition-colors">Mother’s Matric Hr. Sec. School</h4>
+                <p class="text-muted-foreground font-medium">Higher Secondary Certificate (HSC)</p>
+                <p class="text-muted-foreground text-sm mt-3 font-mono">Score: 83.3%</p>
               </div>
               <div class="group relative pl-8 border-l-[3px] border-border hover:border-primary transition-colors">
                 <div class="absolute -left-[10.5px] top-0 w-5 h-5 rounded-full bg-background border-[3px] border-border group-hover:border-primary transition-colors"></div>
-                <p class="font-mono text-sm text-muted-foreground group-hover:text-primary transition-colors mb-2 font-bold">2020 — 2021</p>
-                <h4 class="text-2xl font-bold font-heading mb-2 text-foreground/80 group-hover:text-foreground transition-colors">Geethaanjali All India SR SEC School</h4>
-                <p class="text-muted-foreground font-medium">Secondary School (SSLC)</p>
-                <p class="text-muted-foreground text-sm mt-3 font-mono">Score: 81.9%</p>
+                <p class="font-mono text-sm text-muted-foreground group-hover:text-primary transition-colors mb-2 font-bold">2021</p>
+                <h4 class="text-2xl font-bold font-heading mb-2 text-foreground/80 group-hover:text-foreground transition-colors">Mother’s Matric Hr. Sec. School</h4>
+                <p class="text-muted-foreground font-medium">Secondary School Leaving Certificate (SSLC)</p>
+                <p class="text-muted-foreground text-sm mt-3 font-mono">Score: All Pass</p>
               </div>
             </div>
           </div>
@@ -446,29 +382,19 @@ import MainLayout from '../layouts/main.astro';
                 <div class="font-mono text-xs text-primary mb-3 font-bold flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span> CERTIFICATION
                 </div>
-                <h4 class="text-xl font-bold font-heading leading-snug">Oracle APEX Cloud Developer</h4>
+                <h4 class="text-xl font-bold font-heading leading-snug">AWS Educate – Cloud Computing 101</h4>
               </div>
               <div class="bg-card border border-border/80 rounded-[1.5rem] p-8 hover:shadow-xl transition-all hover:-translate-y-1 hover:border-primary/50 group flex flex-col justify-center">
                 <div class="font-mono text-xs text-primary mb-3 font-bold flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span> CERTIFICATION
                 </div>
-                <h4 class="text-xl font-bold font-heading leading-snug">Oracle OCI AI Foundations</h4>
+                <h4 class="text-xl font-bold font-heading leading-snug">Google Digital Garage – Fundamentals of Digital Marketing</h4>
               </div>
-              <div class="bg-card border border-border/80 rounded-[1.5rem] p-8 hover:shadow-xl transition-all hover:-translate-y-1 hover:border-emerald-500/50 group flex flex-col justify-center relative overflow-hidden">
-                <div class="absolute inset-0 bg-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div class="relative z-10 font-mono text-xs text-emerald-600 dark:text-emerald-400 mb-3 font-bold flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block animate-pulse"></span> AWARD
+              <div class="bg-card border border-border/80 rounded-[1.5rem] p-8 hover:shadow-xl transition-all hover:-translate-y-1 hover:border-primary/50 group flex flex-col justify-center">
+                <div class="font-mono text-xs text-primary mb-3 font-bold flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span> CERTIFICATION
                 </div>
-                <h4 class="relative z-10 text-xl font-bold font-heading leading-snug text-foreground">1st Place — Blind Code</h4>
-                <p class="relative z-10 text-sm font-mono text-muted-foreground mt-3">Conducted by MADC</p>
-              </div>
-              <div class="bg-card border border-border/80 rounded-[1.5rem] p-8 hover:shadow-xl transition-all hover:-translate-y-1 hover:border-emerald-500/50 group flex flex-col justify-center relative overflow-hidden">
-                <div class="absolute inset-0 bg-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div class="relative z-10 font-mono text-xs text-emerald-600 dark:text-emerald-400 mb-3 font-bold flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block animate-pulse"></span> AWARD
-                </div>
-                <h4 class="relative z-10 text-xl font-bold font-heading leading-snug text-foreground">3rd Place — 12Hr Hackathon</h4>
-                <p class="relative z-10 text-sm font-mono text-muted-foreground mt-3">Conducted by MBA</p>
+                <h4 class="text-xl font-bold font-heading leading-snug">OCI AI Foundations Associate</h4>
               </div>
             </div>
           </div>
@@ -483,7 +409,7 @@ import MainLayout from '../layouts/main.astro';
       <div class="container mx-auto px-6 relative z-10">
         <div class="max-w-5xl mx-auto">
           
-          <div class="bg-card border border-border shadow-2xl rounded-[3rem] p-12 md:p-20 relative overflow-hidden animate-elem">
+          <div class="bg-card border border-border shadow-2xl rounded-[3rem] p-12 md:p-20 relative overflow-hidden observe-stomp">
             <!-- decorative bg dots -->
             <div class="absolute inset-0 opacity-[0.03] dark:opacity-10" style="background-image: radial-gradient(circle at 2px 2px, currentColor 2px, transparent 0); background-size: 32px 32px;"></div>
             
@@ -506,28 +432,28 @@ import MainLayout from '../layouts/main.astro';
                     <span class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 text-primary">
                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                     </span>
-                    Erode, Tamilnadu
+                    Olagadam, Bhavani, Erode
                   </p>
                   <p class="flex items-center gap-4">
                     <span class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 text-primary">
                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                     </span>
-                    +91 6382911708
+                    +91 93614 26949
                   </p>
                   <p class="flex items-center gap-4">
                     <span class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 text-primary">
                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     </span>
-                    gurru9440@gmail.com
+                    nivashinidhiyanesh@gmail.com
                   </p>
                 </div>
               </div>
 
               <div class="bg-muted/50 border border-border/80 rounded-[2rem] p-8 md:p-10 backdrop-blur-md">
-                <form action="https://formsubmit.co/gurru9440@gmail.com" method="POST" class="space-y-6">
+                <form action="https://formsubmit.co/nivashinidhiyanesh@gmail.com" method="POST" class="space-y-6">
                   <input type="hidden" name="_subject" value="New submission from Portfolio!">
                   <input type="hidden" name="_captcha" value="false">
-                  <input type="hidden" name="_next" value="https://gurruprasaath-mk.vercel.app/">
+                  <input type="hidden" name="_next" value="#">
                   
                   <div>
                     <input type="text" name="name" placeholder="Your Name" required class="w-full bg-transparent border-b-2 border-border text-foreground px-0 py-4 focus:outline-none focus:border-primary placeholder-muted-foreground transition-colors font-mono text-sm">
@@ -547,10 +473,10 @@ import MainLayout from '../layouts/main.astro';
             </div>
             
             <div class="mt-20 pt-8 border-t border-border flex flex-wrap justify-center gap-8 md:gap-16 relative z-10 font-mono text-xs uppercase tracking-widest font-bold">
-              <a href="https://www.linkedin.com/in/gurruprasaath-m-k/" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 group">
+              <a href="https://linkedin.com/in/dhiyaneshb/" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 group">
                  <span class="w-1 h-1 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span> LinkedIn
               </a>
-              <a href="https://github.com/gurruprasaath" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 group">
+              <a href="https://github.com/Dhiyanesh40" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 group">
                  <span class="w-1 h-1 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span> GitHub
               </a>
               <a href="https://leetcode.com/u/23ADR052/" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 group">
@@ -567,7 +493,7 @@ import MainLayout from '../layouts/main.astro';
     <footer class="border-t border-border py-12 bg-background">
       <div class="container mx-auto px-6">
         <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <p class="text-sm font-mono text-muted-foreground uppercase tracking-widest font-bold">© 2026 · Gurruprasaath M K</p>
+          <p class="text-sm font-mono text-muted-foreground uppercase tracking-widest font-bold">© 2026 · DHIYANESH B</p>
           <div class="flex gap-6 font-mono text-xs uppercase tracking-widest font-bold">
             <a href="#" class="text-muted-foreground hover:text-foreground transition-colors">Back to top ↑</a>
           </div>
@@ -610,17 +536,84 @@ import MainLayout from '../layouts/main.astro';
     }
   }
 
-  /* Scroll Animations - Bidirectional */
-  .animate-elem {
+  /* Stunning Cinematic Scroll Animations */
+  @keyframes heroSweepRev {
+    from {
+      opacity: 0;
+      clip-path: inset(0 100% 0 0);
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      clip-path: inset(-20% -20% -20% -20%);
+      transform: translateX(0);
+    }
+  }
+  .hero-sweep {
+    animation: heroSweepRev 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* 1. Sweep Reveal (Translational Slide) */
+  .observe-sweep {
+    opacity: 0;
+    transform: translateX(-50px);
+    filter: blur(5px);
+    transition: opacity 1s ease-out, filter 1s ease-out, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .observe-sweep.visible {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
   }
 
-  .animate-elem.visible {
+  /* 2. 3D Perspective Flip */
+  .observe-3d-flip {
+    opacity: 0;
+    transform: perspective(2000px) rotateX(25deg) translateY(60px) scale(0.95);
+    transform-style: preserve-3d;
+    transition: opacity 1s ease-out, transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .observe-3d-flip.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: perspective(2000px) rotateX(0deg) translateY(0) scale(1);
+  }
+
+  /* 3. Elastic Bounce Pop */
+  .observe-elastic {
+    opacity: 0;
+    transform: scale(0.8) translateY(80px);
+    transition: opacity 0.8s ease-out, transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .observe-elastic.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  /* 4. Matrix Motion Blur Slice */
+  .observe-matrix {
+    opacity: 0;
+    filter: blur(20px);
+    transform: translate(60px, 60px) skewX(-15deg);
+    transition: opacity 1s ease-out, filter 1.2s ease-out, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .observe-matrix.visible {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translate(0, 0) skewX(0);
+  }
+
+  /* 5. Brutalist Heavy Stomp */
+  .observe-stomp {
+    opacity: 0;
+    transform: scale(1.1) translateY(120px);
+    filter: brightness(0.5);
+    transition: opacity 0.8s ease-in, transform 1s cubic-bezier(0.85, 0, 0.15, 1), filter 1s ease-in;
+  }
+  .observe-stomp.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: brightness(1);
   }
 
   /* Smooth Scrolling */
@@ -687,29 +680,80 @@ import MainLayout from '../layouts/main.astro';
 </style>
 
 <script>
-  // Bidirectional Intersection Observer
-  const observerOptions = {
-    threshold: 0.15,
-    rootMargin: '0px'
-  };
+  // Bulletproof Scroll Bounds Checking
+  const animClasses = ['.observe-sweep', '.observe-3d-flip', '.observe-elastic', '.observe-matrix', '.observe-stomp'];
+  const animatedElements = document.querySelectorAll(animClasses.join(', '));
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      // Add visible class when entering viewport
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+  function checkScrollAnimations() {
+    const triggerBottom = window.innerHeight * 0.9; // Trigger when top of element hits 90% of screen height
+    animatedElements.forEach(el => {
+      const box = el.getBoundingClientRect();
+      // If the top of the box is above the trigger line, and the bottom of the box is below the top of the screen
+      if (box.top < triggerBottom && box.bottom > 0) {
+        el.classList.add('visible');
       } else {
-        // Remove visible class when leaving viewport (for reverse animation)
-        entry.target.classList.remove('visible');
+        // Remove class when out of view so it animates again next time
+        el.classList.remove('visible');
       }
     });
-  }, observerOptions);
+  }
 
-  // Observe all animated elements
-  document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.animate-elem');
-    animatedElements.forEach(el => observer.observe(el));
-  });
+  window.addEventListener('scroll', checkScrollAnimations, { passive: true });
+  // Instantly check on load
+  checkScrollAnimations();
+
+  // Dynamic Scroll Parallax Elements
+  const heroParallax = document.getElementById('hero-parallax-content');
+  const aboutDeck = document.getElementById('about-deck');
+  const deckCards = document.querySelectorAll('.deck-card');
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        
+        // 1. Hero Parallax (Scales Backwards)
+        if (heroParallax) {
+          const scale = Math.max(0.85, 1 - (scrollY * 0.0005));
+          const opacity = Math.max(0, 1 - (scrollY * 0.0015));
+          heroParallax.style.transform = `scale(${scale}) translateY(${scrollY * 0.2}px)`;
+          heroParallax.style.opacity = opacity;
+        }
+
+        // 2. About Deck Scroll Parallax (Fans/Shuffles Background Cards)
+        const aboutDeck = document.getElementById('about-deck');
+        const deckCards = document.querySelectorAll('.deck-card');
+        
+        if (aboutDeck && deckCards.length > 0) {
+          const rect = aboutDeck.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+          
+          if (rect.top < windowHeight && rect.bottom > 0) {
+            // Calculate progress (0 = bottom edge, 1 = top edge)
+            const progress = 1 - (rect.top / windowHeight);
+            const clampedProgress = Math.min(Math.max(progress, 0), 1);
+            
+            deckCards.forEach((card) => {
+              const baseScale = parseFloat(card.getAttribute('data-base-scale'));
+              const baseRotate = parseFloat(card.getAttribute('data-base-rotate'));
+              const spreadMulti = parseFloat(card.getAttribute('data-spread-multi'));
+              
+              // Dynamic shuffle strength based on scroll position!
+              const factor = clampedProgress * 2.5; // Amplified!
+              const currentRotate = baseRotate * factor;
+              const translateX = spreadMulti * factor * 12; // Massive spread!
+              
+              card.style.transform = `scale(${baseScale}) rotate(${currentRotate}deg) translateX(${translateX}px)`;
+            });
+          }
+        }
+        
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
 
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
